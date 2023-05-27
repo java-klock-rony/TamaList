@@ -30,7 +30,7 @@ public class TodoListApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         tasks = FXCollections.observableArrayList(); // Task est une classe qui implémente l'interface ObservableList
-        loadTasksFromFile();
+        loadTasksFromFile(); // On charge les tâches à partir d'un fichier texte
         // On crée les composants graphiques
         BorderPane root = new BorderPane();
         HBox inputBox = createInputBox();
@@ -43,7 +43,7 @@ public class TodoListApp extends Application {
 
         Scene scene = new Scene(root, 300, 400);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Rotogochi's Todo List");
+        primaryStage.setTitle("Rorogochi's Todo List");
         primaryStage.show();
     }
 
@@ -180,6 +180,7 @@ public class TodoListApp extends Application {
         }
     }
 
+    // On lance l'application
     public static void main(String[] args) {
         launch(args);
     }
